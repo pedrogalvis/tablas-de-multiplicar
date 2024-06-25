@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Estilos para la tabla */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Multiplicación</th>
+                <th>Resultado</th>
+            </tr>
+        </thead>
+        <tbody id="tabla">
+            <!-- Aquí se insertarán los resultados con JavaScript -->
+        </tbody>
+    </table>
+
+    <script>
+        // Tu código JavaScript aquí (el mismo que proporcionaste en la pregunta)
+        let input = parseInt(prompt("Digite el número entero para crear la tabla de multiplicar: "));
+        let resultado = "<tr><td colspan='2'>Tabla de multiplicar del " + input + "</td></tr>";
+
+        for (let i = 1; i <= 12; i++) {
+            resultado += `<tr><td>${input} X ${i}</td><td>${input * i}</td></tr>`;
+        }
+
+        document.getElementById('tabla').innerHTML = resultado;
+    </script>
+</body>
+</html>
